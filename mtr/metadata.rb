@@ -1,0 +1,5 @@
+maintainer       "BBY Solutions, Inc."
+maintainer_email "andrew.painter@bestbuy.com"
+license          "All rights reserved"
+description      "Configures MTR Cron Job based on specified IP Addresses and intervals"
+version          "0.0.1"

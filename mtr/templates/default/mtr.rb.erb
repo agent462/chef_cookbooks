@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+log_directory = "<%= @log_directory %>"
+include_dns = <%= @include_dns %> == false ? " --no-dns " : ""
+
+<% @ip_addresses.each do |ip| -%>
+  log_file = "#{log_directory}/<%= ip %>.log"
+  
+  %x[echo --BEGIN ENTRY -- >> #{log_file}]
+  %x[echo "Time Checked: " `date` >> #{log_file}]
+  %x[<%= @mtr_location %> --report #{include_dns} -c <%= @ping_number %> -s <%= @packet_size %> <%= ip %> >> #{log_file}]
+  %x[echo --END ENTRY -- >> #{log_file}]
+    
+<% end -%>
+      
