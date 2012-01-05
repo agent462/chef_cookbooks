@@ -1,0 +1,5 @@
+maintainer       "BBY Solutions, Inc."
+maintainer_email "andrew.painter@bestbuy.com"
+license          "All rights reserved"
+description      "Installs chef_handler_splunk ( https://github.com/adamhjk/chef_handler_splunk ) and configures the specified file"
+version          "0.0.1"
