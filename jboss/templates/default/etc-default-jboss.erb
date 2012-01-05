@@ -1,0 +1,35 @@
+# Define where jboss is - this is the directory containing directories log, bin, conf etc
+JBOSS_HOME=<%= node[:jboss][:home] %>
+
+# Define the user under which jboss will run, or use 'RUNASIS' to run as the current user
+JBOSS_USER=<%= node[:jboss][:user] %>
+
+# Configuration to use, usually one of 'minimal', 'default', 'all'
+JBOSS_CONF=<%= node[:jboss][:server_name] %>
+
+# Bind JBoss services to this address.  Defaults to all interfaces.
+JBOSS_HOST=<%= node[:jboss][:bind_host]  %>
+
+
+# JNDI address and port
+#JBOSS_JNDI_PORT=<%= node[:jboss][:jboss_jndi_port] %>
+#JBOSS_JNDI_ADDR=<%= node[:jboss][:jboss_jndi_addr] %>
+
+# JMX console credentials
+JBOSS_ADMIN_USER=<%= node[:jboss][:jboss_admin_user] %>
+JBOSS_ADMIN_PASS=<%= node[:jboss][:jboss_admin_pass] %>
+
+#JAVA_HOME=
+
+# Define the classpaths for JBoss startup and shutdown
+#JBOSS_CLASSPATH=$JBOSS_HOME/bin/run.jar:$JAVA_HOME/lib/tools.jar
+#JBOSS_SHUTDOWN_CLASSPATH=$JBOSS_HOME/bin/shutdown.jar:$JBOSS_HOME/client/jnet.jar
+#JBOSS_ENDORSED_DIRS=$JBOSS_HOME/lib/endorsed
+
+# Default JAVA_OPTS
+#JAVA_OPTS="-Xms128m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.resolver.warning=true -Dsun.rmi.dgc.client.gcInterval=3600000 "
+#JAVA_OPTS+=" -Dsun.rmi.dgc.server.gcInterval=3600000 -Dsun.lang.ClassLoader.allowArraySyntax=true -Djava.net.preferIPv4Stack=true -server "
+
+JBOSS_PIDFILE=<%= node[:jboss][:jboss_pidfile] %>
+
+JBOSS_CONSOLE=<%= node[:jboss][:console_log] %>
