@@ -1,0 +1,5 @@
+maintainer       "Best Buy, Inc."
+maintainer_email "bryan.brandau@bestbuy.com"
+license          "Apache 2.0"
+description      "Installs zip and unzip"
+version          "0.1"
