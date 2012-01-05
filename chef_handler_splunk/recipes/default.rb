@@ -31,7 +31,7 @@ bash "Adding chef_handler_splunk.rb to #{client_config}" do
    not_if "grep chef_handler_splunk #{client_config}"
 end
 
-# Move the MTR template over
+# Move the chef_handler_splunk template over to the client directory
 template "Copying chef_handler_splunk template" do
   path "#{node[:chef_handler_splunk][:client_directory]}/chef_handler_splunk.rb"
   source "chef_handler_splunk.rb.erb"
